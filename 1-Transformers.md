@@ -20,6 +20,9 @@ Implement a decoder-only transformer language model.
 
 - Here are some first principle questions to answer:
     - What is different architecturally from the Transformer, vs a normal RNN, like an LSTM? (Specifically, how are recurrence and time managed?)
+  
+    - It has positional embeddings, so there's no recurrence / time management explicitly. Also, it uses multi-headed attention.
+
     - Attention is defined as, Attention(Q,K,V) = softmax(QK^T/sqrt(d_k))V. What are the dimensions for Q, K, and V? Why do we use this setup? What other combinations could we do with (Q,K) that also output weights?
     - Are the dense layers different at each multi-head attention block? Why or why not? 
     - Why do we have so many skip connections, especially connecting the input of an attention function to the output? Intuitively, what if we didn't? 
